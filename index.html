@@ -61,16 +61,6 @@
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-ink focus:px-4 focus:py-2.5 focus:text-small focus:font-bold focus:text-white">本文へスキップ</a>
 
-<div class="hidden border-b border-line bg-mist lg:block">
-  <div class="mx-auto flex h-9 max-w-content items-center justify-end gap-6 px-6 text-[11px] text-sub">
-    <span>FOP・LSP・搭乗記録をまとめて管理するiPhoneアプリ</span>
-    <span aria-hidden="true" class="h-3 w-px bg-line-strong"></span>
-    <a href="contact/" class="transition-colors hover:text-accent">お問い合わせ</a>
-    <a href="privacy/" class="transition-colors hover:text-accent">プライバシーポリシー</a>
-    <a href="terms/" class="transition-colors hover:text-accent">利用規約</a>
-  </div>
-</div>
-
 <header data-header class="sticky top-0 z-50 border-b border-line bg-white">
   <div class="mx-auto flex h-[62px] max-w-content items-center justify-between px-6">
     <a href="#top" class="flex items-center gap-2.5" aria-label="FOP Pass トップへ">
@@ -84,7 +74,7 @@
       <a data-navlink href="#pro" class="text-small font-bold text-sub transition-colors hover:text-accent">料金</a>
       <a data-navlink href="#glossary" class="text-small font-bold text-sub transition-colors hover:text-accent">FOPとLSP</a>
       <a data-navlink href="#faq" class="text-small font-bold text-sub transition-colors hover:text-accent">よくある質問</a>
-      <a href="https://apps.apple.com/jp/app/id6801746633" class="btn btn-primary !px-5 !py-2.5 !text-[13px]">App Storeで入手</a>
+      <a href="https://apps.apple.com/jp/app/id6801746633" class="badge-appstore" aria-label="App Storeでダウンロード"><img src="assets/img/appstore-badge.svg" alt="Download on the App Store" width="130" height="43" class="!h-[43px]"></a>
     </nav>
 
     <button data-menu-toggle type="button" aria-expanded="false" aria-controls="mobile-menu" class="-mr-2 flex h-11 w-11 items-center justify-center lg:hidden">
@@ -101,7 +91,7 @@
       <a href="#glossary" class="block border-b border-line py-3.5 text-small font-bold">FOPとLSP</a>
       <a href="#faq" class="block border-b border-line py-3.5 text-small font-bold">よくある質問</a>
       <a href="contact/" class="block border-b border-line py-3.5 text-small font-bold">お問い合わせ</a>
-      <a href="https://apps.apple.com/jp/app/id6801746633" class="btn btn-primary my-4 w-full">App Storeで入手</a>
+      <div class="my-4"><a href="https://apps.apple.com/jp/app/id6801746633" class="badge-appstore" aria-label="App Storeでダウンロード"><img src="assets/img/appstore-badge.svg" alt="Download on the App Store" width="160" height="53"></a></div>
     </nav>
   </div>
 </header>
@@ -120,11 +110,8 @@
         FOP Passは、FLY ONポイント・Life Statusポイント・搭乗予定・修行プランをまとめて管理するiPhoneアプリです。JMBサファイアやJGCまで残り何FOPかを、確定分と予定分に分けて確認できます。
       </p>
 
-      <div class="intro mt-9 flex flex-wrap items-center gap-6" style="animation-delay:180ms">
-        <a href="https://apps.apple.com/jp/app/id6801746633" class="btn btn-primary">
-          <svg width="15" height="18" viewBox="0 0 17 21" fill="currentColor" aria-hidden="true"><path d="M14.1 11.1c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2-1.1 2.8-2.2.9-1.2 1.2-2.5 1.3-2.5-.1 0-2.5-1-2.5-3.6zM11.9 3.5c.6-.8 1-1.9.9-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-.9 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
-          App Storeで入手
-        </a>
+      <div class="intro mt-9 flex flex-wrap items-center gap-x-8 gap-y-5" style="animation-delay:180ms">
+        <a href="https://apps.apple.com/jp/app/id6801746633" class="badge-appstore" aria-label="App Storeでダウンロード"><img src="assets/img/appstore-badge.svg" alt="Download on the App Store" width="160" height="53"></a>
         <a href="#features" class="link-arrow">機能を見る<span aria-hidden="true">→</span></a>
       </div>
 
@@ -272,67 +259,92 @@
 </section>
 
 <section id="widget" class="border-b border-line bg-ink py-16 text-white lg:py-24">
-  <div class="mx-auto max-w-content px-6">
-    <p class="reveal text-label font-bold text-white/70">WIDGET ／ PRO</p>
-    <h2 class="reveal mt-4 text-[24px] font-extrabold tracking-tight sm:text-[30px]">アプリを開かなくても、わかる。</h2>
-    <p class="reveal mt-6 max-w-prose text-body text-white/75">
-      FOP、LSP、ステータス進捗、次のフライト。4種類のウィジェットをホーム画面に置けば、開かずに今の状況が分かります。
-    </p>
-    <dl class="reveal mt-12 grid border-t border-white/25 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="border-b border-white/25 py-6 pr-6 lg:border-r">
-        <dt class="text-[19px] font-extrabold tracking-tight">FOP</dt>
-        <dd class="mt-2 text-small text-white/70">今年の積算と、確定・未反映・予定の内訳</dd>
-      </div>
-      <div class="border-b border-white/25 py-6 pr-6 lg:border-r lg:pl-6">
-        <dt class="text-[19px] font-extrabold tracking-tight">LSP</dt>
-        <dd class="mt-2 text-small text-white/70">生涯累積と、次のStarグレードまでの距離</dd>
-      </div>
-      <div class="border-b border-white/25 py-6 pr-6 lg:border-r lg:pl-6">
-        <dt class="text-[19px] font-extrabold tracking-tight">ステータス進捗</dt>
-        <dd class="mt-2 text-small text-white/70">目標までの残りFOPと達成率</dd>
-      </div>
-      <div class="border-b border-white/25 py-6 lg:pl-6">
-        <dt class="text-[19px] font-extrabold tracking-tight">次のフライト</dt>
-        <dd class="mt-2 text-small text-white/70">出発時刻と、その便で得られるFOP・LSP</dd>
-      </div>
-    </dl>
-    <p class="reveal mt-8 text-[12px] text-white/70">ウィジェットはPro機能です。小・中・大のサイズに対応しています。</p>
+  <div class="mx-auto grid max-w-content items-center gap-14 px-6 lg:grid-cols-[1fr_330px] lg:gap-20">
+    <div>
+      <p class="reveal text-label font-bold text-white/70">WIDGET ／ PRO</p>
+      <h2 class="reveal mt-4 text-[24px] font-extrabold tracking-tight sm:text-[30px]">アプリを開かなくても、わかる。</h2>
+      <p class="reveal mt-6 max-w-prose text-body text-white/75">
+        FOP、LSP、ステータス進捗、次のフライト。4種類のウィジェットをホーム画面に置けば、開かずに今の状況が分かります。次のフライトなら、出発時刻と搭乗口、その便で得られるFOPとLSPまで。
+      </p>
+      <dl class="reveal mt-10 border-t border-white/25">
+        <div class="grid gap-1 border-b border-white/25 py-4 sm:grid-cols-[9rem_1fr] sm:gap-6">
+          <dt class="text-label font-bold">FOP</dt><dd class="text-small text-white/70">今年の積算と、確定・未反映・予定の内訳</dd>
+        </div>
+        <div class="grid gap-1 border-b border-white/25 py-4 sm:grid-cols-[9rem_1fr] sm:gap-6">
+          <dt class="text-label font-bold">LSP</dt><dd class="text-small text-white/70">生涯累積と、次のStarグレードまでの距離</dd>
+        </div>
+        <div class="grid gap-1 border-b border-white/25 py-4 sm:grid-cols-[9rem_1fr] sm:gap-6">
+          <dt class="text-label font-bold">ステータス進捗</dt><dd class="text-small text-white/70">目標までの残りFOPと達成率</dd>
+        </div>
+        <div class="grid gap-1 border-b border-white/25 py-4 sm:grid-cols-[9rem_1fr] sm:gap-6">
+          <dt class="text-label font-bold">次のフライト</dt><dd class="text-small text-white/70">出発時刻・搭乗口と、獲得予定のFOP・LSP</dd>
+        </div>
+      </dl>
+      <p class="reveal mt-7 text-[12px] text-white/70">ウィジェットはPro機能です。小・中・大のサイズに対応しています。</p>
+    </div>
+
+    <div class="reveal mx-auto w-full max-w-[280px] lg:max-w-none">
+      <img src="assets/img/shot-widget.png" alt="ホーム画面に置いたFOP Passのウィジェット。次のフライト（ITM→HND 08:15、+1,132 FOP、搭乗口12）とJMBサファイアまでの進捗55.8%が表示されている。" width="802" height="1690" class="w-full" loading="lazy">
+    </div>
   </div>
 </section>
 
-<section id="pro" class="border-b border-line py-16 lg:py-24">
+<section id="pro" class="border-b border-line bg-mist py-16 lg:py-24">
   <div class="mx-auto max-w-content px-6">
     <h2 class="reveal rule-mark text-[24px] font-extrabold tracking-tight sm:text-[28px]">料金</h2>
     <p class="reveal lede mt-6 max-w-prose">
       本体は無料です。記録と進捗の管理は、無料のままずっとお使いいただけます。Proは「どう飛べば届くか」を考えるための機能をまとめて開放します。
     </p>
 
-    <div class="reveal mt-12 grid gap-px border border-line bg-line sm:grid-cols-2">
-      <div class="bg-white p-8 lg:p-10">
+    <div class="reveal mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8">
+
+      <div class="flex flex-col rounded-card border border-line bg-white p-8 lg:p-10">
         <p class="text-label font-bold text-sub">無料版</p>
-        <p class="mt-4 font-num text-[46px] font-semibold leading-none tnum">¥0</p>
-        <p class="mt-4 text-small text-sub">FOP・LSPの進捗管理、FOPの自動計算、あと何回の試算、搭乗履歴の管理。</p>
+        <p class="mt-5 flex items-baseline gap-2">
+          <span class="font-num text-[52px] font-semibold leading-none tnum">¥0</span>
+          <span class="text-small font-bold text-sub">ずっと無料</span>
+        </p>
+        <p class="mt-5 text-small text-sub">記録と進捗の管理に必要な機能は、すべて無料で使えます。</p>
+        <ul class="mt-8 space-y-3.5 border-t border-line pt-8 text-small">
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>ステータス進捗（確定・未反映・予定）</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>FOP・マイルの自動計算</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>あと何回の試算</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>搭乗履歴の管理</li>
+        </ul>
+        <p class="mt-8 text-[12px] leading-relaxed text-sub">
+          アカウント登録もログインも不要です。データは端末内にのみ保存されます。
+        </p>
       </div>
-      <div class="bg-white p-8 lg:p-10">
-        <p class="text-label font-bold text-accent">FOP Pass Pro</p>
-        <p class="mt-4 font-num text-[46px] font-semibold leading-none tnum text-accent">¥680</p>
-        <p class="mt-2 text-[12px] font-bold text-sub">買い切り／自動更新なし</p>
-        <p class="mt-4 text-small text-sub">修行プラン、LSPシミュレーション、搭乗履歴の分析、ホーム画面ウィジェット。</p>
+
+      <div class="relative flex flex-col overflow-hidden rounded-card bg-ink p-8 text-white lg:p-10">
+        <span aria-hidden="true" class="absolute inset-x-0 top-0 h-[3px] bg-accent"></span>
+        <div class="flex items-center gap-3">
+          <p class="text-label font-bold text-white/70">FOP Pass Pro</p>
+          <span class="rounded bg-accent px-2 py-0.5 text-[10px] font-bold tracking-wide">買い切り</span>
+        </div>
+        <p class="mt-5 flex items-baseline gap-2">
+          <span class="font-num text-[52px] font-semibold leading-none tnum">¥680</span>
+          <span class="text-small font-bold text-white/70">一度きり／自動更新なし</span>
+        </p>
+        <p class="mt-5 text-small text-white/75">「どう飛べば届くか」を考える機能をまとめて開放します。</p>
+        <ul class="mt-8 space-y-3.5 border-t border-white/25 pt-8 text-small">
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>修行プランの自動提案</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>LSPシミュレーション</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>搭乗履歴の分析</li>
+          <li class="flex gap-3"><span aria-hidden="true" class="mt-[3px] shrink-0 text-accent">✓</span>ホーム画面ウィジェット</li>
+        </ul>
+        <p class="mt-8 text-[12px] leading-relaxed text-white/60">
+          同じApple Accountであれば「購入を復元」からいつでも引き継げます。広告は表示しません。
+        </p>
       </div>
+
     </div>
 
-    <p class="reveal mt-6 text-small text-sub">
-      一度ご購入いただければ、同じApple Accountで「購入を復元」からいつでも引き継げます。広告は表示しません。
-    </p>
-
-    <div class="reveal mt-10 flex flex-wrap gap-4">
-      <a href="https://apps.apple.com/jp/app/id6801746633" class="btn btn-primary">App Storeで入手</a>
-      <a href="#features" class="btn btn-ghost">機能の一覧を見る</a>
-    </div>
+    <div class="reveal mt-10"><a href="https://apps.apple.com/jp/app/id6801746633" class="badge-appstore" aria-label="App Storeでダウンロード"><img src="assets/img/appstore-badge.svg" alt="Download on the App Store" width="160" height="53"></a></div>
   </div>
 </section>
 
-<section id="glossary" class="border-b border-line bg-mist py-16 lg:py-24">
+<section id="glossary" class="border-b border-line py-16 lg:py-24">
   <div class="mx-auto max-w-content px-6">
     <h2 class="reveal rule-mark text-[24px] font-extrabold tracking-tight sm:text-[28px]">FOPとLSPについて</h2>
     <p class="reveal lede mt-6 max-w-prose">
@@ -435,10 +447,7 @@
         <p class="mt-1.5 text-small text-sub">無料でダウンロード ／ Pro機能は買い切り680円</p>
       </div>
     </div>
-    <a href="https://apps.apple.com/jp/app/id6801746633" class="btn btn-primary shrink-0">
-      <svg width="15" height="18" viewBox="0 0 17 21" fill="currentColor" aria-hidden="true"><path d="M14.1 11.1c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2-1.1 2.8-2.2.9-1.2 1.2-2.5 1.3-2.5-.1 0-2.5-1-2.5-3.6zM11.9 3.5c.6-.8 1-1.9.9-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-.9 2.9 1 .1 2-.5 2.7-1.3z"/></svg>
-      App Storeで入手
-    </a>
+    <a href="https://apps.apple.com/jp/app/id6801746633" class="badge-appstore" aria-label="App Storeでダウンロード"><img src="assets/img/appstore-badge.svg" alt="Download on the App Store" width="160" height="53"></a>
   </div>
 </section>
 

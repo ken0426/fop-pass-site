@@ -1,6 +1,6 @@
 /**
  * FOP Pass 公式サイトの挙動。
- * 依存なし。ヘッダーの状態変化、スクロール表示、モバイルメニュー、お問い合わせのmailto生成。
+ * 依存なし。ヘッダーの影、スクロール表示、モバイルメニュー、現在地の強調。
  */
 (function () {
   'use strict';
@@ -59,71 +59,6 @@
     );
     revealables.forEach(function (el) {
       observer.observe(el);
-    });
-  }
-
-  /* ---------- お問い合わせ: 入力内容からメールを組み立てて起動 ---------- */
-  var form = document.querySelector('[data-contact-form]');
-  if (form) {
-    var address = form.dataset.contactForm;
-    var bugFields = form.querySelector('[data-bug-fields]');
-    var category = form.querySelector('#category');
-
-    var syncBugFields = function () {
-      if (!bugFields || !category) return;
-      var isBug = category.value === 'バグ・不具合の報告';
-      bugFields.classList.toggle('hidden', !isBug);
-      bugFields.setAttribute('aria-hidden', String(!isBug));
-    };
-    if (category) {
-      category.addEventListener('change', syncBugFields);
-      syncBugFields();
-    }
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var value = function (name) {
-        var field = form.querySelector('[name="' + name + '"]');
-        return field && field.value ? field.value.trim() : '';
-      };
-
-      var lines = [
-        '【お問い合わせ種別】',
-        value('category'),
-        '',
-        '【返信先メールアドレス】',
-        value('email'),
-        '',
-        '【内容】',
-        value('body'),
-      ];
-
-      if (value('category') === 'バグ・不具合の報告') {
-        lines.push(
-          '',
-          '----- 環境（任意） -----',
-          'iOSバージョン: ' + (value('ios') || '未記入'),
-          'アプリバージョン: ' + (value('appVersion') || '未記入'),
-          '端末名: ' + (value('device') || '未記入'),
-          '',
-          '再現手順:',
-          value('steps') || '未記入',
-        );
-      }
-
-      var subject = value('subject') || 'FOP Pass お問い合わせ';
-      var href =
-        'mailto:' +
-        address +
-        '?subject=' +
-        encodeURIComponent('[FOP Pass] ' + subject) +
-        '&body=' +
-        encodeURIComponent(lines.join('\n'));
-
-      window.location.href = href;
-
-      var notice = form.querySelector('[data-mail-notice]');
-      if (notice) notice.classList.remove('hidden');
     });
   }
 
