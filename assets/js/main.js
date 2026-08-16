@@ -7,15 +7,11 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- ヘッダー: スクロールで背景と境界線を出す ---------- */
+  /* ---------- ヘッダー: 追従中だけ影を落として本文と分ける ---------- */
   var header = document.querySelector('[data-header]');
   if (header) {
     var applyHeaderState = function () {
-      var scrolled = window.scrollY > 8;
-      header.classList.toggle('bg-white/95', scrolled);
-      header.classList.toggle('backdrop-blur', scrolled);
-      header.classList.toggle('border-line', scrolled);
-      header.classList.toggle('border-transparent', !scrolled);
+      header.classList.toggle('shadow-[0_1px_8px_rgba(20,22,26,0.08)]', window.scrollY > 8);
     };
     applyHeaderState();
     window.addEventListener('scroll', applyHeaderState, { passive: true });
@@ -142,7 +138,7 @@
           navLinks.forEach(function (link) {
             var active = link.getAttribute('href') === '#' + entry.target.id;
             link.classList.toggle('text-ink', active);
-            link.classList.toggle('text-muted', !active);
+            link.classList.toggle('text-sub', !active);
           });
         });
       },

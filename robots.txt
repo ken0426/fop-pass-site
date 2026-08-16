@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ken0426.github.io/fop-pass-site/sitemap.xml

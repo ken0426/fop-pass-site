@@ -4,31 +4,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: '#0B0B0C',
-        accent: '#E11D2E',
-        /* 白抜き文字を載せる面。AA（4.5:1）を満たす深さにしてある。 */
-        'accent-deep': '#C4132A',
-        'accent-dark': '#B8121F',
-        paper: '#FAFAFA',
-        surface: '#FFFFFF',
-        mist: '#F3F3F4',
-        line: '#E6E6E8',
-        muted: '#6B6B70',
+        /* 航空会社のサイトに倣い、白地・黒文字・赤は差し色だけに使う。 */
+        ink: '#14161A',
+        sub: '#57575C',
+        line: '#DCDCDE',
+        'line-strong': '#B4B4B8',
+        mist: '#F4F4F5',
+        accent: '#C8102E',
+        'accent-hover': '#A50D26',
       },
       fontFamily: {
-        /* ラテンはInter、日本語はNoto Sans JPで受ける。 */
         sans: [
-          'Inter', '"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"',
+          'Inter', '"Noto Sans JP"', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"',
           '"Yu Gothic Medium"', 'system-ui', '-apple-system', 'sans-serif',
         ],
-        /* 数字だけ運輸系サインの空気を持つコンデンスド。 */
         num: ['Oswald', 'Inter', 'system-ui', 'sans-serif'],
       },
-      transitionTimingFunction: {
-        spring: 'cubic-bezier(0.34, 1.32, 0.64, 1)',
+      maxWidth: { content: '1120px', prose: '46rem' },
+      borderRadius: { DEFAULT: '2px', card: '3px' },
+      fontSize: {
+        /* 情報量を落とさないよう、本文は小さめ・行間広めに揃える。 */
+        body: ['15px', { lineHeight: '1.95' }],
+        small: ['13px', { lineHeight: '1.85' }],
+        label: ['12px', { lineHeight: '1.6', letterSpacing: '0.04em' }],
       },
-      maxWidth: { content: '1180px' },
-      letterSpacing: { tightest: '-0.035em' },
     },
   },
   plugins: [],
